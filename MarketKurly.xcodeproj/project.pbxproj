@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE01FD2072A84839F2395B8 /* Pods_MarketKurly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3905283A6478F694B39194C1 /* Pods_MarketKurly.framework */; };
 		76188AED287F14920065B3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188AEC287F14920065B3CA /* AppDelegate.swift */; };
 		76188AEF287F14920065B3CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188AEE287F14920065B3CA /* SceneDelegate.swift */; };
-		76188AF1287F14920065B3CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188AF0287F14920065B3CA /* ViewController.swift */; };
+		76188AF1287F14920065B3CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188AF0287F14920065B3CA /* HomeViewController.swift */; };
 		76188AF4287F14920065B3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76188AF2287F14920065B3CA /* Main.storyboard */; };
 		76188AF6287F14940065B3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76188AF5287F14940065B3CA /* Assets.xcassets */; };
 		76188AF9287F14940065B3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76188AF7287F14940065B3CA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1005300A484C528A4CD012 /* Pods-MarketKurly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurly.debug.xcconfig"; path = "Target Support Files/Pods-MarketKurly/Pods-MarketKurly.debug.xcconfig"; sourceTree = "<group>"; };
+		3905283A6478F694B39194C1 /* Pods_MarketKurly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketKurly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76188AE9287F14920065B3CA /* MarketKurly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76188AEC287F14920065B3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76188AEE287F14920065B3CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76188AF0287F14920065B3CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76188AF0287F14920065B3CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		76188AF3287F14920065B3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76188AF5287F14940065B3CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76188AF8287F14940065B3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76188AFA287F14940065B3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurly.release.xcconfig"; path = "Target Support Files/Pods-MarketKurly/Pods-MarketKurly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE01FD2072A84839F2395B8 /* Pods_MarketKurly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				76188AEB287F14920065B3CA /* MarketKurly */,
 				76188AEA287F14920065B3CA /* Products */,
+				F5C15E97CE116059EEA52E26 /* Pods */,
+				9ADAA45528B48DF96E0FACB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +65,30 @@
 			children = (
 				76188AEC287F14920065B3CA /* AppDelegate.swift */,
 				76188AEE287F14920065B3CA /* SceneDelegate.swift */,
-				76188AF0287F14920065B3CA /* ViewController.swift */,
+				76188AF0287F14920065B3CA /* HomeViewController.swift */,
 				76188AF2287F14920065B3CA /* Main.storyboard */,
 				76188AF5287F14940065B3CA /* Assets.xcassets */,
 				76188AF7287F14940065B3CA /* LaunchScreen.storyboard */,
 				76188AFA287F14940065B3CA /* Info.plist */,
 			);
 			path = MarketKurly;
+			sourceTree = "<group>";
+		};
+		9ADAA45528B48DF96E0FACB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3905283A6478F694B39194C1 /* Pods_MarketKurly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5C15E97CE116059EEA52E26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C1005300A484C528A4CD012 /* Pods-MarketKurly.debug.xcconfig */,
+				B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76188AFD287F14940065B3CA /* Build configuration list for PBXNativeTarget "MarketKurly" */;
 			buildPhases = (
+				106EAFE9F9BF4961DF695F5C /* [CP] Check Pods Manifest.lock */,
 				76188AE5287F14920065B3CA /* Sources */,
 				76188AE6287F14920065B3CA /* Frameworks */,
 				76188AE7287F14920065B3CA /* Resources */,
+				A35B98B692775B394BA89747 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +159,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		106EAFE9F9BF4961DF695F5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarketKurly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A35B98B692775B394BA89747 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarketKurly/Pods-MarketKurly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarketKurly/Pods-MarketKurly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarketKurly/Pods-MarketKurly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76188AE5287F14920065B3CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76188AF1287F14920065B3CA /* ViewController.swift in Sources */,
+				76188AF1287F14920065B3CA /* HomeViewController.swift in Sources */,
 				76188AED287F14920065B3CA /* AppDelegate.swift in Sources */,
 				76188AEF287F14920065B3CA /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +350,7 @@
 		};
 		76188AFE287F14940065B3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1005300A484C528A4CD012 /* Pods-MarketKurly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +379,7 @@
 		};
 		76188AFF287F14940065B3CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

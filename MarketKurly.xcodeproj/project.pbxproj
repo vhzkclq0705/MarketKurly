@@ -14,6 +14,9 @@
 		76188AF4287F14920065B3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76188AF2287F14920065B3CA /* Main.storyboard */; };
 		76188AF6287F14940065B3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76188AF5287F14940065B3CA /* Assets.xcassets */; };
 		76188AF9287F14940065B3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76188AF7287F14940065B3CA /* LaunchScreen.storyboard */; };
+		76188B04288067E60065B3CA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B02288067E60065B3CA /* MenuCell.swift */; };
+		76188B05288067E60065B3CA /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B03288067E60065B3CA /* MenuCell.xib */; };
+		76188B0728806B150065B3CA /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B0628806B150065B3CA /* FocusView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		76188AF5287F14940065B3CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76188AF8287F14940065B3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76188AFA287F14940065B3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76188B02288067E60065B3CA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		76188B03288067E60065B3CA /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		76188B0628806B150065B3CA /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
 		B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurly.release.xcconfig"; path = "Target Support Files/Pods-MarketKurly/Pods-MarketKurly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,15 +69,34 @@
 		76188AEB287F14920065B3CA /* MarketKurly */ = {
 			isa = PBXGroup;
 			children = (
+				76188B012880678B0065B3CA /* PagingView */,
+				76188B00288067860065B3CA /* Controllers */,
 				76188AEC287F14920065B3CA /* AppDelegate.swift */,
 				76188AEE287F14920065B3CA /* SceneDelegate.swift */,
-				76188AF0287F14920065B3CA /* HomeViewController.swift */,
 				76188AF2287F14920065B3CA /* Main.storyboard */,
 				76188AF5287F14940065B3CA /* Assets.xcassets */,
 				76188AF7287F14940065B3CA /* LaunchScreen.storyboard */,
 				76188AFA287F14940065B3CA /* Info.plist */,
 			);
 			path = MarketKurly;
+			sourceTree = "<group>";
+		};
+		76188B00288067860065B3CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76188AF0287F14920065B3CA /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		76188B012880678B0065B3CA /* PagingView */ = {
+			isa = PBXGroup;
+			children = (
+				76188B02288067E60065B3CA /* MenuCell.swift */,
+				76188B03288067E60065B3CA /* MenuCell.xib */,
+				76188B0628806B150065B3CA /* FocusView.xib */,
+			);
+			path = PagingView;
 			sourceTree = "<group>";
 		};
 		9ADAA45528B48DF96E0FACB2 /* Frameworks */ = {
@@ -152,8 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76188AF9287F14940065B3CA /* LaunchScreen.storyboard in Resources */,
+				76188B05288067E60065B3CA /* MenuCell.xib in Resources */,
 				76188AF6287F14940065B3CA /* Assets.xcassets in Resources */,
 				76188AF4287F14920065B3CA /* Main.storyboard in Resources */,
+				76188B0728806B150065B3CA /* FocusView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76188AF1287F14920065B3CA /* HomeViewController.swift in Sources */,
+				76188B04288067E60065B3CA /* MenuCell.swift in Sources */,
 				76188AED287F14920065B3CA /* AppDelegate.swift in Sources */,
 				76188AEF287F14920065B3CA /* SceneDelegate.swift in Sources */,
 			);

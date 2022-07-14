@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
-        configurePagingView()
         configureViewController()
     }
     
@@ -25,7 +24,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    func configurePagingView() {
+    func configureViewController() {
         menuViewController.register(
             nib: UINib(nibName: "MenuCell", bundle: nil),
             forCellWithReuseIdentifier: MenuCell.identifier)
@@ -33,10 +32,6 @@ class HomeViewController: UIViewController {
             nib: UINib(nibName: "FocusView", bundle: nil))
         menuViewController.reloadData()
         contentViewController.reloadData()
-    }
-    
-    func configureViewController() {
-        
     }
     
 }

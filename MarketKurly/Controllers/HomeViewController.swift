@@ -13,8 +13,6 @@ class HomeViewController: UIViewController {
     var menuViewController: PagingMenuViewController!
     var contentViewController: PagingContentViewController!
     
-    let menu = ["컬리추천", "신상품", "베스트", "알뜰쇼핑", "특가/혜택"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +69,7 @@ extension HomeViewController: PagingMenuViewControllerDataSource,
             withReuseIdentifier: MenuCell.identifier,
             for: index) as! MenuCell
         
-        cell.titleLabel.text = menu[index]
+        cell.titleLabel.text = menu[index].title
         
         return cell
     }
@@ -93,7 +91,7 @@ extension HomeViewController: PagingContentViewControllerDataSource,
     }
     
     func contentViewController(viewController: PagingContentViewController, viewControllerAt index: Int) -> UIViewController {
-        return UIViewController()
+        return menu[index].vc
     }
     
     func contentViewController(viewController: PagingContentViewController, didManualScrollOn index: Int, percent: CGFloat) {

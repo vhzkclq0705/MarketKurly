@@ -17,6 +17,9 @@
 		76188B04288067E60065B3CA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B02288067E60065B3CA /* MenuCell.swift */; };
 		76188B05288067E60065B3CA /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B03288067E60065B3CA /* MenuCell.xib */; };
 		76188B0728806B150065B3CA /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B0628806B150065B3CA /* FocusView.xib */; };
+		76188B09288078470065B3CA /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B08288078470065B3CA /* SpecialViewController.swift */; };
+		76188B0B288078920065B3CA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B0A288078920065B3CA /* RecommendViewController.swift */; };
+		76188B0E288081930065B3CA /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B0D288081930065B3CA /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		76188B02288067E60065B3CA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		76188B03288067E60065B3CA /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		76188B0628806B150065B3CA /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		76188B08288078470065B3CA /* SpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
+		76188B0A288078920065B3CA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		76188B0D288081930065B3CA /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurly.release.xcconfig"; path = "Target Support Files/Pods-MarketKurly/Pods-MarketKurly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +75,7 @@
 		76188AEB287F14920065B3CA /* MarketKurly */ = {
 			isa = PBXGroup;
 			children = (
+				76188B0C288081850065B3CA /* Data */,
 				76188B012880678B0065B3CA /* PagingView */,
 				76188B00288067860065B3CA /* Controllers */,
 				76188AEC287F14920065B3CA /* AppDelegate.swift */,
@@ -85,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				76188AF0287F14920065B3CA /* HomeViewController.swift */,
+				76188B0A288078920065B3CA /* RecommendViewController.swift */,
+				76188B08288078470065B3CA /* SpecialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +106,14 @@
 				76188B0628806B150065B3CA /* FocusView.xib */,
 			);
 			path = PagingView;
+			sourceTree = "<group>";
+		};
+		76188B0C288081850065B3CA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				76188B0D288081930065B3CA /* Menu.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		9ADAA45528B48DF96E0FACB2 /* Frameworks */ = {
@@ -234,9 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				76188AF1287F14920065B3CA /* HomeViewController.swift in Sources */,
+				76188B0B288078920065B3CA /* RecommendViewController.swift in Sources */,
+				76188B0E288081930065B3CA /* Menu.swift in Sources */,
 				76188B04288067E60065B3CA /* MenuCell.swift in Sources */,
 				76188AED287F14920065B3CA /* AppDelegate.swift in Sources */,
 				76188AEF287F14920065B3CA /* SceneDelegate.swift in Sources */,
+				76188B09288078470065B3CA /* SpecialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,6 +73,9 @@
                         <buttonConfiguration key="configuration" style="filled" image="cart" catalog="system" cornerStyle="capsule">
                             <color key="baseBackgroundColor" red="0.30980392159999998" green="0.070588235289999995" blue="0.46274509800000002" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapCartButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="IyQ-2p-PJF"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -97,6 +100,14 @@
                 <constraint firstItem="WC6-H3-yPo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v0z-d6-3tP"/>
             </constraints>
             <size key="customSize" width="175" height="371"/>
+            <connections>
+                <outlet property="coupon" destination="32y-A7-swo" id="rby-gB-aGv"/>
+                <outlet property="imageView" destination="Zvv-sL-Cc0" id="bhC-x7-7Gd"/>
+                <outlet property="priceLabel" destination="MXf-Nv-qmy" id="zcv-f8-lUe"/>
+                <outlet property="saleLabel" destination="hEc-As-z7H" id="MrM-kE-1Q5"/>
+                <outlet property="titleLabel" destination="lCz-Ah-xz2" id="WZ1-xI-RD3"/>
+                <outlet property="totalLabel" destination="MSM-S4-143" id="wio-al-yM1"/>
+            </connections>
             <point key="canvasLocation" x="222.46376811594206" y="214.95535714285714"/>
         </collectionViewCell>
     </objects>

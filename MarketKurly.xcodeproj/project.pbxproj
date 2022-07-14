@@ -36,6 +36,7 @@
 		76188B30288087990065B3CA /* ImageSlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B2E288087990065B3CA /* ImageSlideCollectionViewCell.xib */; };
 		76188B33288087AB0065B3CA /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B31288087AB0065B3CA /* DailyCollectionViewCell.swift */; };
 		76188B34288087AB0065B3CA /* DailyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B32288087AB0065B3CA /* DailyCollectionViewCell.xib */; };
+		76188B3728808D2B0065B3CA /* UILabel++Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B3628808D2B0065B3CA /* UILabel++Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		76188B2E288087990065B3CA /* ImageSlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		76188B31288087AB0065B3CA /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
 		76188B32288087AB0065B3CA /* DailyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyCollectionViewCell.xib; sourceTree = "<group>"; };
+		76188B3628808D2B0065B3CA /* UILabel++Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++Extensions.swift"; sourceTree = "<group>"; };
 		B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurly.release.xcconfig"; path = "Target Support Files/Pods-MarketKurly/Pods-MarketKurly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		76188AEB287F14920065B3CA /* MarketKurly */ = {
 			isa = PBXGroup;
 			children = (
+				76188B3528808D0E0065B3CA /* Extensions */,
 				76188B26288086290065B3CA /* CollectionViewCell */,
 				76188B0F288084060065B3CA /* TableViewCell */,
 				76188B0C288081850065B3CA /* Data */,
@@ -178,6 +181,14 @@
 				76188B32288087AB0065B3CA /* DailyCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		76188B3528808D0E0065B3CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				76188B3628808D2B0065B3CA /* UILabel++Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9ADAA45528B48DF96E0FACB2 /* Frameworks */ = {
@@ -330,6 +341,7 @@
 				76188B2B288087770065B3CA /* RecommendCollectionViewCell.swift in Sources */,
 				76188B14288085080065B3CA /* ImageSlideCell.swift in Sources */,
 				76188B2F288087990065B3CA /* ImageSlideCollectionViewCell.swift in Sources */,
+				76188B3728808D2B0065B3CA /* UILabel++Extensions.swift in Sources */,
 				76188B0E288081930065B3CA /* Menu.swift in Sources */,
 				76188B202880857C0065B3CA /* SpecialCell.swift in Sources */,
 				76188B04288067E60065B3CA /* MenuCell.swift in Sources */,

@@ -37,6 +37,7 @@
 		76188B33288087AB0065B3CA /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B31288087AB0065B3CA /* DailyCollectionViewCell.swift */; };
 		76188B34288087AB0065B3CA /* DailyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76188B32288087AB0065B3CA /* DailyCollectionViewCell.xib */; };
 		76188B3728808D2B0065B3CA /* UILabel++Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76188B3628808D2B0065B3CA /* UILabel++Extensions.swift */; };
+		766FAA6328809A0B00B4B7E1 /* Recommed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FAA6228809A0B00B4B7E1 /* Recommed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		76188B31288087AB0065B3CA /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
 		76188B32288087AB0065B3CA /* DailyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyCollectionViewCell.xib; sourceTree = "<group>"; };
 		76188B3628808D2B0065B3CA /* UILabel++Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++Extensions.swift"; sourceTree = "<group>"; };
+		766FAA6228809A0B00B4B7E1 /* Recommed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommed.swift; sourceTree = "<group>"; };
 		B769914649E912169AAC0D4A /* Pods-MarketKurly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurly.release.xcconfig"; path = "Target Support Files/Pods-MarketKurly/Pods-MarketKurly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				76188B0D288081930065B3CA /* Menu.swift */,
+				766FAA6228809A0B00B4B7E1 /* Recommed.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				76188B33288087AB0065B3CA /* DailyCollectionViewCell.swift in Sources */,
 				76188AF1287F14920065B3CA /* HomeViewController.swift in Sources */,
+				766FAA6328809A0B00B4B7E1 /* Recommed.swift in Sources */,
 				76188B242880859A0065B3CA /* DailyCell.swift in Sources */,
 				76188B1C288085590065B3CA /* BannerCell.swift in Sources */,
 				76188B0B288078920065B3CA /* RecommendViewController.swift in Sources */,

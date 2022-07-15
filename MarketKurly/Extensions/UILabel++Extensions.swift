@@ -7,17 +7,17 @@
 
 import UIKit
 
-extension UILabel {
-    // Int형의 값을 받아 1000단위로 콤마(,)를 표시
-    func formatCost(_ cost: Int) {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
+// Int형의 값을 받아 1000단위로 콤마(,)를 표시
+public func formatCost(_ cost: Int) -> String {
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .decimal
 
-        let result = numberFormatter.string(for: cost)!
-        
-        self.text = result + "원"
-    }
+    let result = numberFormatter.string(for: cost)!
     
+    return "\(result)원"
+}
+
+extension UILabel {
     // StrikeThrough 표시
     func showStrikeThrough(_ text: String) {
         let attributedString = NSAttributedString(

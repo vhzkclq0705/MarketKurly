@@ -70,23 +70,32 @@
                                     <segue destination="w0v-1H-H0o" kind="embed" identifier="content" id="GNL-2l-xqB"/>
                                 </connections>
                             </containerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6yz-9C-aS8">
+                                <rect key="frame" x="0.0" y="148" width="414" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rRC-m1-Igl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bqH-GN-eRi" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" constant="20" id="D5m-Hp-SQi"/>
+                            <constraint firstItem="6yz-9C-aS8" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" id="DxP-aD-fJJ"/>
                             <constraint firstItem="SXd-l7-PFW" firstAttribute="top" secondItem="bqH-GN-eRi" secondAttribute="bottom" id="Euv-xr-hH9"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="bqH-GN-eRi" secondAttribute="trailing" constant="20" id="HfM-tz-ity"/>
                             <constraint firstItem="SXd-l7-PFW" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" id="Klx-43-wHh"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="bottom" secondItem="tDb-IG-QRP" secondAttribute="bottom" id="SRO-tk-zMA"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="tDb-IG-QRP" secondAttribute="trailing" id="Tu3-Gn-wkv"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="SXd-l7-PFW" secondAttribute="trailing" id="V6L-Kj-7pe"/>
+                            <constraint firstItem="tDb-IG-QRP" firstAttribute="top" secondItem="6yz-9C-aS8" secondAttribute="top" constant="-10" id="Xl4-NT-rdD"/>
+                            <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="6yz-9C-aS8" secondAttribute="trailing" id="e7O-X1-fzl"/>
                             <constraint firstItem="bqH-GN-eRi" firstAttribute="top" secondItem="rRC-m1-Igl" secondAttribute="top" id="gCI-t9-R2U"/>
                             <constraint firstItem="tDb-IG-QRP" firstAttribute="top" secondItem="bqH-GN-eRi" secondAttribute="bottom" id="mcA-hU-X9X"/>
                             <constraint firstItem="tDb-IG-QRP" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" id="xee-Tn-l51"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BS7-8N-qDs"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="6yz-9C-aS8" id="aO6-3S-Sj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7U8-sr-UfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,6 +169,7 @@
                     <view key="view" contentMode="scaleToFill" id="MXe-9j-BHd">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wmw-AZ-gae"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
@@ -174,6 +184,7 @@
                     <view key="view" contentMode="scaleToFill" id="XsL-R8-daC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sTn-Q2-mD0"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
@@ -189,7 +200,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvK-5e-016">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvK-5e-016">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -209,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PG-6h-tBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523" y="1728"/>
+            <point key="canvasLocation" x="-688" y="1728"/>
         </scene>
         <!--Special View Controller-->
         <scene sceneID="G8a-bM-t7h">
@@ -236,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vy8-z7-Q0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="1728"/>
+            <point key="canvasLocation" x="201" y="1728"/>
         </scene>
     </scenes>
     <resources>

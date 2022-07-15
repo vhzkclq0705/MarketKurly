@@ -10,7 +10,7 @@ import UIKit
 class RecommendCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Outlet
-    @IBOutlet weak var coupon: UIButton!
+    @IBOutlet weak var couponLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var saleLabel: UILabel!
@@ -20,44 +20,45 @@ class RecommendCollectionViewCell: UICollectionViewCell {
     // MARK: - Property
     var cartButtonTapHandler: (() -> Void)?
     
-    // MARK: - Funcs
+    // MARK: - Life cycle
+    override func prepareForReuse() {
+        [couponLabel, priceLabel, saleLabel]
+            .forEach { $0?.isHidden = true }
+    }
+    
     // MARK: 셀 업데이트
-    func updateCell(image: UIImage, title: String, sale: Int?, total: Int, price: Int?) {
-        imageView.image = image
-        titleLabel.text = title
+    func updateCell(_ recommend: Recommend) {
+        imageView.image = recommend.image
+        titleLabel.text = recommend.title
+        totalLabel.text = formatCost(recommend.total)
         
-        if let sale = sale,
-           let price = price {
-            calculatePrice(price: price, sale: sale)
-            checkCoupon(sale)
-            saleLabel.isHidden = false
+        if let sale = recommend.sale,
+           let price = recommend.price {
+            priceLabel.showStrikeThrough(formatCost(price))
+            saleLabel.text = "\(sale)%"
+            showCoupon(coupon: recommend.coupon, sale: sale)
+            initComponents(false)
         } else {
-            saleLabel.isHidden = true
+            initComponents(true)
         }
     }
     
-    // MARK: 30% 확률로 쿠폰 생성
-    func checkCoupon(_ sale: Int) {
-        let num = Int.random(in: 1...10)
-        
-        switch num {
-        case 1, 2, 3:
-            coupon.setTitle("+\(sale)%쿠폰", for: .normal)
-            coupon.isHidden = false
-        default: coupon.isHidden = true
+    // MARK: 세일 표시
+    func initComponents(_ bool: Bool) {
+        [saleLabel, priceLabel]
+            .forEach { $0?.isHidden = bool }
+    }
+    
+    // MARK: 쿠폰
+    func showCoupon(coupon: Bool, sale: Int) {
+        if coupon {
+            couponLabel.isHidden = false
+            couponLabel.text = "+\(sale)%쿠폰"
+        } else {
+            couponLabel.isHidden = true
         }
     }
     
-    // MARK: 할인 계산
-    func calculatePrice(price: Int, sale: Int) {
-        let salePrice = price / 100 * sale
-        let total = price - salePrice
-        
-        saleLabel.text = "\(sale)%"
-        priceLabel.showStrikeThrough("\(price)")
-        totalLabel.formatCost(total)
-    }
-
     // MARK: 카트 버튼 액션
     @IBAction func didTapCartButton(_ sender: Any) {
         cartButtonTapHandler?()

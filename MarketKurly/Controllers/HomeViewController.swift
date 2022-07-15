@@ -9,7 +9,9 @@ import UIKit
 import PagingKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var menuViewController: PagingMenuViewController!
     var contentViewController: PagingContentViewController!
     
@@ -17,23 +19,34 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
-        configureViewController()
+        configurePagingMenu()
+        loadingIndicator.startAnimating()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.configurePagingContent()
+            self.loadingIndicator.stopAnimating()
+            self.loadingIndicator.isHidden = true
+        }
     }
     
     func configureNavigationBar() {
         
     }
     
-    func configureViewController() {
+    func configurePagingMenu() {
         menuViewController.register(
             nib: UINib(nibName: "MenuCell", bundle: nil),
             forCellWithReuseIdentifier: MenuCell.identifier)
-        menuViewController.registerFocusView(
-            nib: UINib(nibName: "FocusView", bundle: nil))
         menuViewController.reloadData()
-        contentViewController.reloadData()
     }
     
+    func configurePagingContent() {
+        menuViewController.registerFocusView(
+            nib: UINib(nibName: "FocusView", bundle: nil))
+        contentViewController.reloadData()
+    }
 }
 
 // MARK: - PagingMenuViewController

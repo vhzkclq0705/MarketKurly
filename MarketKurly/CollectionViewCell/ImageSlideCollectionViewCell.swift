@@ -9,9 +9,10 @@ import UIKit
 
 class ImageSlideCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var imageView: UIImageView!
+    
+    func updateCell(_ image: UIImage) {
+        imageView.image = image
     }
 
 }

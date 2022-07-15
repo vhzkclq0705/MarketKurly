@@ -36,11 +36,36 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGh-ut-LXK">
+                        <rect key="frame" x="308" y="52.5" width="86" height="31"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-Cs-9MQ">
+                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="31"/>
+                                <color key="tintColor" red="0.30813586710000002" green="0.072511024770000002" blue="0.4627730846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapRefreshButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="C3p-gj-Q8o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP8-XU-wOY">
+                                <rect key="frame" x="42.5" y="0.0" width="43.5" height="31"/>
+                                <color key="tintColor" red="0.30980392159999998" green="0.070588235289999995" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapAddButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e3L-YP-XRC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="NSb-Ir-nHn" secondAttribute="trailing" id="6Pi-gf-Mo7"/>
                     <constraint firstAttribute="bottom" secondItem="NSb-Ir-nHn" secondAttribute="bottom" id="8Ft-Lt-KLP"/>
+                    <constraint firstItem="XGh-ut-LXK" firstAttribute="centerY" secondItem="7fQ-sN-QLi" secondAttribute="centerY" id="GiC-pN-rNo"/>
                     <constraint firstItem="NSb-Ir-nHn" firstAttribute="top" secondItem="7fQ-sN-QLi" secondAttribute="bottom" id="Nnj-G2-u1M"/>
+                    <constraint firstAttribute="trailing" secondItem="XGh-ut-LXK" secondAttribute="trailing" constant="20" symbolic="YES" id="VmH-mV-W6q"/>
                     <constraint firstItem="7fQ-sN-QLi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cQK-cE-kCb"/>
                     <constraint firstItem="7fQ-sN-QLi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="hcN-s0-ZlT"/>
                     <constraint firstItem="NSb-Ir-nHn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rue-F7-I4P"/>
@@ -48,12 +73,16 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addButton" destination="YP8-XU-wOY" id="gWL-Wc-fKa"/>
                 <outlet property="collectionView" destination="NSb-Ir-nHn" id="a2r-iO-ur5"/>
+                <outlet property="refreshButton" destination="YP8-XU-wOY" id="1Jp-PU-5lS"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="298.66071428571428"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

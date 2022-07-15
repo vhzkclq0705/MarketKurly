@@ -11,6 +11,7 @@ class ImageSlideCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    // MARK: 셀 업데이트
     func updateCell(_ image: UIImage) {
         imageView.image = image
     }

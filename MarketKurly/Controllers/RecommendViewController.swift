@@ -10,13 +10,16 @@ import PagingKit
 
 class RecommendViewController: UIViewController {
     
+    // MARK: - UI
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
     }
     
+    // MARK: - Setup
     func configureViewController() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -33,6 +36,7 @@ class RecommendViewController: UIViewController {
     }
 }
 
+// MARK: - TableView
 extension RecommendViewController: UITableViewDelegate,
                                    UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,15 +56,25 @@ extension RecommendViewController: UITableViewDelegate,
                 return UITableViewCell()
             }
             return cell
-//        case 3:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell") as? DailyCell else {
-//                return UITableViewCell()
-//            }
-//            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell") as? DailyCell else {
+                return UITableViewCell()
+            }
+            return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendCell") as? RecommendCell else {
                 return UITableViewCell()
             }
+            
+            cell.refreshButtonTapHandler = {
+                cell.recommends = basicRecommends.shuffled()
+            }
+            
+            cell.addButtonTapHandler = {
+                let product = basicRecommends.randomElement()!
+                cell.recommends.append(product)
+            }
+            
             return cell
         }
     }

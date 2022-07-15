@@ -9,7 +9,7 @@ import UIKit
 
 class RecommendCollectionViewCell: UICollectionViewCell {
 
-    // MARK: - Outlet
+    // MARK: - UI
     @IBOutlet weak var couponLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,7 +26,7 @@ class RecommendCollectionViewCell: UICollectionViewCell {
             .forEach { $0?.isHidden = true }
     }
     
-    // MARK: 셀 업데이트
+    // MARK: Setup
     func updateCell(_ recommend: Recommend) {
         imageView.image = recommend.image
         titleLabel.text = recommend.title
@@ -38,8 +38,6 @@ class RecommendCollectionViewCell: UICollectionViewCell {
             saleLabel.text = "\(sale)%"
             showCoupon(coupon: recommend.coupon, sale: sale)
             initComponents(false)
-        } else {
-            initComponents(true)
         }
     }
     

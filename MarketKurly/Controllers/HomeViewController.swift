@@ -10,11 +10,14 @@ import PagingKit
 
 class HomeViewController: UIViewController {
     
+    // MARK: - UI
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    // MARK: - Property
     var menuViewController: PagingMenuViewController!
     var contentViewController: PagingContentViewController!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +34,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // MARK: - Setup
     func configureNavigationBar() {
         let logo = UIImage(named: "logo")
         let imageView = UIImageView(image: logo)

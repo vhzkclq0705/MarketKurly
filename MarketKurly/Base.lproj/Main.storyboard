@@ -57,13 +57,6 @@
                                     <segue destination="Z6c-oB-Nol" kind="embed" identifier="menu" id="z6g-p2-5JX"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-l7-PFW">
-                                <rect key="frame" x="0.0" y="138" width="414" height="0.5"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="0.29999999999999999" id="NUZ-o2-xoc"/>
-                                </constraints>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDb-IG-QRP">
                                 <rect key="frame" x="0.0" y="138" width="414" height="675"/>
                                 <connections>
@@ -79,12 +72,9 @@
                         <constraints>
                             <constraint firstItem="bqH-GN-eRi" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" constant="20" id="D5m-Hp-SQi"/>
                             <constraint firstItem="6yz-9C-aS8" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" id="DxP-aD-fJJ"/>
-                            <constraint firstItem="SXd-l7-PFW" firstAttribute="top" secondItem="bqH-GN-eRi" secondAttribute="bottom" id="Euv-xr-hH9"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="bqH-GN-eRi" secondAttribute="trailing" constant="20" id="HfM-tz-ity"/>
-                            <constraint firstItem="SXd-l7-PFW" firstAttribute="leading" secondItem="rRC-m1-Igl" secondAttribute="leading" id="Klx-43-wHh"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="bottom" secondItem="tDb-IG-QRP" secondAttribute="bottom" id="SRO-tk-zMA"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="tDb-IG-QRP" secondAttribute="trailing" id="Tu3-Gn-wkv"/>
-                            <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="SXd-l7-PFW" secondAttribute="trailing" id="V6L-Kj-7pe"/>
                             <constraint firstItem="tDb-IG-QRP" firstAttribute="top" secondItem="6yz-9C-aS8" secondAttribute="top" constant="-10" id="Xl4-NT-rdD"/>
                             <constraint firstItem="rRC-m1-Igl" firstAttribute="trailing" secondItem="6yz-9C-aS8" secondAttribute="trailing" id="e7O-X1-fzl"/>
                             <constraint firstItem="bqH-GN-eRi" firstAttribute="top" secondItem="rRC-m1-Igl" secondAttribute="top" id="gCI-t9-R2U"/>
@@ -166,7 +156,7 @@
         <!--Paging Menu View Controller-->
         <scene sceneID="Xck-Xn-PLA">
             <objects>
-                <viewController id="Z6c-oB-Nol" customClass="PagingMenuViewController" customModule="PagingKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PagingMenuViewController" id="Z6c-oB-Nol" customClass="PagingMenuViewController" customModule="PagingKit" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MXe-9j-BHd">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,34 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PG-6h-tBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="1728"/>
-        </scene>
-        <!--Special View Controller-->
-        <scene sceneID="G8a-bM-t7h">
-            <objects>
-                <viewController storyboardIdentifier="SpecialViewController" id="GHL-gt-5Kz" customClass="SpecialViewController" customModule="MarketKurly" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UJD-7C-wmQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cOZ-cc-M0E">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Br5-ue-UYb"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="cOZ-cc-M0E" secondAttribute="bottom" id="EAT-Go-EM7"/>
-                            <constraint firstItem="cOZ-cc-M0E" firstAttribute="leading" secondItem="Br5-ue-UYb" secondAttribute="leading" id="I4G-tv-H4M"/>
-                            <constraint firstAttribute="trailing" secondItem="cOZ-cc-M0E" secondAttribute="trailing" id="OOa-Ad-LTN"/>
-                            <constraint firstItem="cOZ-cc-M0E" firstAttribute="top" secondItem="Br5-ue-UYb" secondAttribute="top" id="ybw-Ot-srp"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vy8-z7-Q0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="201" y="1728"/>
+            <point key="canvasLocation" x="-175" y="1732"/>
         </scene>
     </scenes>
     <resources>

@@ -9,15 +9,23 @@ import UIKit
 
 class RecommendCell: UITableViewCell {
 
+    // MARK: - UI
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     
-    let recommends = basicRecommends.shuffled()
+    // MARK: - Property
+    var recommends = basicRecommends.shuffled()
+    var refreshButtonTapHandler: (() -> Void)?
+    var addButtonTapHandler: (() -> Void)?
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configureCell()
     }
     
+    // MARK: - Setup
     func configureCell() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -26,8 +34,20 @@ class RecommendCell: UITableViewCell {
         let nib = UINib(nibName: "RecommendCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "RecommendCollectionViewCell")
     }
+    
+    // MARK: - Button actions
+    @IBAction func didTapRefreshButton(_ sender: Any) {
+        refreshButtonTapHandler?()
+        collectionView.reloadData()
+    }
+    
+    @IBAction func didTapAddButton(_ sender: Any) {
+        addButtonTapHandler?()
+        collectionView.reloadData()
+    }
 }
 
+// MARK: - CollectionView
 extension RecommendCell: UICollectionViewDelegate,
                          UICollectionViewDataSource,
                          UICollectionViewDelegateFlowLayout{
@@ -44,13 +64,14 @@ extension RecommendCell: UICollectionViewDelegate,
         cell.updateCell(recommends[indexPath.item])
         
         cell.cartButtonTapHandler = {
-            // TODO: 삭제 구현
+            self.recommends.remove(at: indexPath.item)
+            collectionView.reloadData()
         }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 175, height: 300)
+        return CGSize(width: 150, height: 300)
     }
 }

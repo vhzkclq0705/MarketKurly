@@ -9,19 +9,23 @@ import UIKit
 
 class ImageSlideCell: UITableViewCell {
     
+    // MARK: - UI
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var countLabel: UILabel!
     
+    // MARK: - Property
     var timer: Timer?
     var index = 0
     let images = basicRecommends.map { $0.image }
 
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configureCell()
         startTimer()
     }
     
+    // MARK: - Setup
     func configureCell() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -33,6 +37,7 @@ class ImageSlideCell: UITableViewCell {
         countLabel.text = "1 / \(images.count)"
     }
     
+    // MARK: - Timer
     func startTimer() {
         timer = Timer.scheduledTimer(
             timeInterval: 3,
@@ -59,6 +64,7 @@ class ImageSlideCell: UITableViewCell {
     }
 }
 
+// MARK: - CollectionView
 extension ImageSlideCell: UICollectionViewDelegate,
                           UICollectionViewDataSource,
                           UICollectionViewDelegateFlowLayout {
@@ -74,6 +80,10 @@ extension ImageSlideCell: UICollectionViewDelegate,
         cell.updateCell(images[indexPath.item])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

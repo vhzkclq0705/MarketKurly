@@ -32,7 +32,25 @@ class HomeViewController: UIViewController {
     }
     
     func configureNavigationBar() {
+        let logo = UIImage(named: "logo")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = imageView
         
+        let locationButton = UIBarButtonItem(
+            image: UIImage(named: "location"),
+            style: .done,
+            target: self,
+            action: nil)
+        let cartButton = UIBarButtonItem(
+            image: UIImage(systemName: "cart"),
+            style: .done,
+            target: self,
+            action: nil)
+        
+        self.navigationItem.rightBarButtonItems = [
+            cartButton, locationButton
+        ]
     }
     
     func configurePagingMenu() {

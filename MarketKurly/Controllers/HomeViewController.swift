@@ -91,7 +91,7 @@ extension HomeViewController: PagingMenuViewControllerDataSource,
     }
     
     func menuViewController(viewController: PagingMenuViewController, widthForItemAt index: Int) -> CGFloat {
-        return viewController.view.frame.width / 5
+        return (self.view.frame.width - 40) / 5
     }
     
     func menuViewController(viewController: PagingMenuViewController, cellForItemAt index: Int) -> PagingMenuViewCell {

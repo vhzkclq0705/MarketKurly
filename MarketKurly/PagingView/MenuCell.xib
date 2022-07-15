@@ -13,9 +13,9 @@
             <rect key="frame" x="0.0" y="0.0" width="133" height="49"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igE-3k-t8t">
-                    <rect key="frame" x="0.0" y="5" width="133" height="39"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igE-3k-t8t">
+                    <rect key="frame" x="5" y="5" width="123" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -23,8 +23,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="igE-3k-t8t" firstAttribute="top" secondItem="YpA-I4-7Ca" secondAttribute="top" constant="5" id="8kz-Dk-sAp"/>
-                <constraint firstItem="igE-3k-t8t" firstAttribute="leading" secondItem="YpA-I4-7Ca" secondAttribute="leading" id="D12-Q6-Hvj"/>
-                <constraint firstAttribute="trailing" secondItem="igE-3k-t8t" secondAttribute="trailing" id="fFF-Bt-1WP"/>
+                <constraint firstItem="igE-3k-t8t" firstAttribute="leading" secondItem="YpA-I4-7Ca" secondAttribute="leading" constant="5" id="D12-Q6-Hvj"/>
+                <constraint firstAttribute="trailing" secondItem="igE-3k-t8t" secondAttribute="trailing" constant="5" id="fFF-Bt-1WP"/>
                 <constraint firstAttribute="bottom" secondItem="igE-3k-t8t" secondAttribute="bottom" constant="5" id="uOX-ch-V6n"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -40,7 +40,7 @@ class ImageSlideCell: UITableViewCell {
     // MARK: - Timer
     func startTimer() {
         timer = Timer.scheduledTimer(
-            timeInterval: 3,
+            timeInterval: 1.5,
             target: self,
             selector: #selector(moveIndex),
             userInfo: nil,

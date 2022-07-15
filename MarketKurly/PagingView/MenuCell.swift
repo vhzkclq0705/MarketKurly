@@ -18,8 +18,8 @@ class MenuCell: PagingMenuViewCell {
         didSet {
             titleLabel.textColor = isSelected ? #colorLiteral(red: 0.3396247625, green: 0.03896826506, blue: 0.4810866714, alpha: 1) : .darkGray
             titleLabel.font = isSelected
-            ? .systemFont(ofSize: 17, weight: .semibold)
-            : .systemFont(ofSize: 17, weight: .regular)
+            ? .systemFont(ofSize: 15, weight: .semibold)
+            : .systemFont(ofSize: 15, weight: .regular)
         }
     }
     

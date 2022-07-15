@@ -14,6 +14,6 @@ public let menu = [
         .instantiateViewController(withIdentifier: "RecommendViewController") as! RecommendViewController),
     (title: "신상품", vc: UIViewController()),
     (title: "베스트", vc: UIViewController()),
-    (title: "알뜰쇼핑", vc: UIViewController()),
+    (title: "알뜰쇼핑  ", vc: UIViewController()),
     (title: "특가/혜택", vc: UIViewController()),
 ]

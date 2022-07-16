@@ -23,6 +23,7 @@ class RecommendCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureCell()
+        // 테스트
     }
     
     // MARK: - Setup
